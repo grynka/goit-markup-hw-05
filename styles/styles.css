@@ -27,6 +27,55 @@ h2 {
   margin: 0;
 }
 
+/*--------MODAL----------*/
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form {
+    width: 528px;
+    height: 581px;
+    background: #FFFFFF;
+    margin: auto;
+    padding: 8px;
+    border-radius: 4px;
+    transform: scale(1);
+    transition-duration: 250ms;
+}
+
+.is-hidden .form {
+  transform: scale(0);
+}
+
+.close {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    float: right;
+}
+
+.backdrop {
+    margin: auto;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 20%);
+}
+
+/*--------END MODAL----------*/
+
 .title-main {
   font-size: 36px;
   font-weight: 700;
@@ -47,6 +96,25 @@ img {
   padding: 24px 0px 24.49px 0;
   border-bottom: solid 1px var(--brand-color-border);
   margin: 0 auto;
+}
+
+.active {
+  position: relative;
+  
+
+}
+
+.active::after {
+    background-color: var(--brand-color-blue);
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    content: "";
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -32px;
 }
 
 nav {
@@ -70,7 +138,7 @@ nav .logo {
   text-decoration: none;
   line-height: 1.1738;
   margin-right: 93px;
-}
+  }
 
 nav .logo:hover {
   color: var(--brand-color-black);
@@ -83,6 +151,9 @@ span.web {
 nav a {
   color: var(--brand-color);
   font-weight: 500;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav li:not(:last-child) {
@@ -184,6 +255,9 @@ button {
   line-height: 1.875;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   position: relative;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .banner button:hover {
@@ -304,6 +378,9 @@ button {
   fill: #afb1b8;
   border-radius: 50%;
   padding: 12px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item {
@@ -338,6 +415,9 @@ button {
   border-radius: 4px;
   fill: #afb1b8;
   padding: 16px 32px;
+  transition-property: fill, outline-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
@@ -354,6 +434,9 @@ button {
 .footer {
   background-color: var(--brand-color-background);
   padding: 60px 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .block-left {
@@ -403,6 +486,9 @@ address a {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 12px;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .s-links {
@@ -445,6 +531,9 @@ address a {
   font-size: 16px;
   cursor: pointer;
   letter-spacing: 0.03em;
+  transition-property: color, box-shadow, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter > li {
@@ -477,6 +566,9 @@ button:focus {
     text-decoration: none;
     color: var(--brand-color);
     display: block;
+    transition-property: box-shadow, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:hover,

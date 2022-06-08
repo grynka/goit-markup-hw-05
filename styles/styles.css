@@ -59,7 +59,10 @@ h2 {
   width: 30px;
   height: 30px;
   display: flex;
-  float: right;
+  right: 8px;
+  position: absolute;
+  padding: 0;
+}
 }
 
 .close:hover, .close:focus {

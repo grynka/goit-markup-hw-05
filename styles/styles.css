@@ -58,16 +58,16 @@ h2 {
   align-items: center;
   width: 30px;
   height: 30px;
-  display: flex;
   right: 8px;
   position: absolute;
   padding: 0;
-}
+  top: 8px;
 }
 
-.close:hover, .close:focus {
-    fill: var(--brand-color-blue);
-    border: var(--brand-color-blue) 1px solid;
+.close:hover,
+.close:focus {
+  fill: var(--brand-color-blue);
+  border: var(--brand-color-blue) 1px solid;
 }
 
 .backdrop {
@@ -392,7 +392,6 @@ button {
   margin: 0;
 }
 
-
 .social-list {
   justify-content: center;
   margin-top: 16px;
@@ -490,7 +489,7 @@ address {
   font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.714;
-  }
+}
 
 address p {
   margin: 0 0 9px 0;
